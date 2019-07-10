@@ -5,8 +5,6 @@ services:
 before_install:
   docker build -t shiqi -f Dockerfile.dev .
 
-script:
-  - docker run shiqi npm run test
 
 deploy:
   provider: elasticbeanstalk
