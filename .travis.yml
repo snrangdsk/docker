@@ -7,8 +7,7 @@ before_install:
 
 
 script:
-  - docker run shiqi npm run test -- --coverage
-  - exit(0)
+  - docker run -e CI=true shiqi npm run test
 
 deploy:
   provider: elasticbeanstalk
